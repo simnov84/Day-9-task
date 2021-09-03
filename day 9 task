@@ -47,6 +47,12 @@ var request = new XMLHttpRequest();
  request.send();
  request.onload = function(){
      var data = JSON.parse(request.response);
-     console.log(data.filter(item=>item.currencies.name=="United States dollar"));
-     }
-     
+      let cus = data.filter((ele)=>{
+        for(let i in ele.currencies){
+        if(ele.currencies[i].code==='USD'){
+          return true;
+        }
+      }
+      })
+      console.log(cus);
+  }   
