@@ -5,7 +5,7 @@ var request = new XMLHttpRequest();
  request.send();
  request.onload = function(){
      var data = JSON.parse(request.response);
-      console.log(data.filter(item=>item.region=="Asia"));
+      console.log(data.filter(item=>item.region=="Asia"));}
       
 2.Get all the countries with a population of less than 2 lakhs using Filter function
 
@@ -14,7 +14,7 @@ var request = new XMLHttpRequest();
  request.send();
  request.onload = function(){
      var data = JSON.parse(request.response);
-     console.log(data.filter(item=>item.population<200000));
+     console.log(data.filter(item=>item.population<200000));}
      
 3.Print the following details name, capital, flag using forEach function
 
@@ -35,7 +35,6 @@ var request = new XMLHttpRequest();
  request.send();
  request.onload = function(){
      var data = JSON.parse(request.response);
-     //console.log(data);
       var pop = data.reduce((acc,ele)=>acc+ele.population,0);
       console.log(pop);
       }
